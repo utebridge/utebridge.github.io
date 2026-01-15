@@ -1,0 +1,306 @@
+/* CSS Variables - Theme Configuration */
+:root {
+    --accent-color: #f2c94e;
+    --accent2-color: #50c878;
+    --accent3-color: #3d96e9;
+    --accent4-color: #e94e77;
+    --primary-color: #d71b15;
+    --dark-text-color: #202020;
+    --gray-text-color: #6e6e6e;
+    --button-padding-x: 16px;
+    --button-padding-y: 10px;
+    --font-family-body: 'Roboto', sans-serif;
+    --light-text-color: #ffffff;
+    --dark-border-color: #4e4e4e;
+    --light-border-color: #dcdcdc;
+    --font-family-heading: 'Poppins', sans-serif;
+    --button-rounded-radius: 8px;
+    --dark-background-color: #1a1a1a;
+    --light-background-color: #ffeaea;
+    --medium-background-color: #f3c0bd;
+    --primary-button-text-color: #ffffff;
+    --secondary-button-bg-color: #f4f4f4;
+    --secondary-button-text-color: #333333;
+    --primary-button-hover-bg-color: #b01510;
+    --primary-button-hover-text-color: #ffffff;
+    --secondary-button-hover-bg-color: #e6e6e6;
+    --secondary-button-hover-text-color: #333333;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-body);
+    color: var(--dark-text-color);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(215, 27, 21, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(215, 27, 21, 0.6);
+    }
+}
+
+/* Animation Classes */
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobile-menu.show {
+    max-height: 500px;
+    display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-button-hover-bg-color);
+}
+
+/* Selection Styles */
+::selection {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Button Hover Effects */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-button-text-color);
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border-radius: var(--button-rounded-radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-button-hover-bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(215, 27, 21, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-button-bg-color);
+    color: var(--secondary-button-text-color);
+    padding: var(--button-padding-y) var(--button-padding-x);
+    border-radius: var(--button-rounded-radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-button-hover-bg-color);
+    transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Glass Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent4-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section Transitions */
+.code-section {
+    transition: all 0.3s ease;
+}
+
+/* Image Hover Effects */
+.image-hover {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.image-hover img {
+    transition: transform 0.5s ease;
+}
+
+.image-hover:hover img {
+    transform: scale(1.05);
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid var(--light-border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Focus States for Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid var(--accent3-color);
+    outline-offset: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-padding {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+    }
+}
