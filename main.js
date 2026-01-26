@@ -90,5 +90,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Console message for developers
 console.log('%c Ute Bridge Initiative ', 'background: #d71b15; color: white; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Built by Gavin Thomsen ', 'background: #f2c94e; color: #202020; font-size: 14px; padding: 5px;');
 console.log('Learn more at: https://www.facebook.com/people/Ute-Bridge/100085178156840/');
