@@ -1,10 +1,10 @@
 /* CSS Variables - Theme Configuration */
 :root {
-    --accent-color: #f2c94e;
-    --accent2-color: #50c878;
-    --accent3-color: #3d96e9;
-    --accent4-color: #e94e77;
-    --primary-color: #d71b15;
+    --primary-color: #be0000;
+    --accent-color: #be0000;
+    --accent2-color: #990000;
+    --accent3-color: #be0000;
+    --accent4-color: #990000;
     --dark-text-color: #202020;
     --gray-text-color: #6e6e6e;
     --button-padding-x: 16px;
@@ -16,12 +16,12 @@
     --font-family-heading: 'Poppins', sans-serif;
     --button-rounded-radius: 8px;
     --dark-background-color: #1a1a1a;
-    --light-background-color: #ffeaea;
-    --medium-background-color: #f3c0bd;
+    --light-background-color: #f5f5f5;
+    --medium-background-color: #e5e5e5;
     --primary-button-text-color: #ffffff;
     --secondary-button-bg-color: #f4f4f4;
     --secondary-button-text-color: #333333;
-    --primary-button-hover-bg-color: #b01510;
+    --primary-button-hover-bg-color: #990000;
     --primary-button-hover-text-color: #ffffff;
     --secondary-button-hover-bg-color: #e6e6e6;
     --secondary-button-hover-text-color: #333333;
@@ -94,10 +94,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes pulse-glow {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(215, 27, 21, 0.3);
+        box-shadow: 0 0 20px rgba(190, 0, 0, 0.3);
     }
     50% {
-        box-shadow: 0 0 40px rgba(215, 27, 21, 0.6);
+        box-shadow: 0 0 40px rgba(190, 0, 0, 0.6);
     }
 }
 
@@ -173,7 +173,7 @@ a {
 .btn-primary:hover {
     background-color: var(--primary-button-hover-bg-color);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(215, 27, 21, 0.3);
+    box-shadow: 0 10px 30px rgba(190, 0, 0, 0.3);
 }
 
 .btn-secondary {
@@ -265,7 +265,7 @@ a {
 /* Focus States for Accessibility */
 a:focus,
 button:focus {
-    outline: 2px solid var(--accent3-color);
+    outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
 
