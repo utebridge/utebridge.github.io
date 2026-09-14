@@ -304,3 +304,8 @@ button:focus {
         background: white;
     }
 }
+
+/* Anchor scroll offset so sections clear the sticky header */
+section[id] {
+    scroll-margin-top: 7.5rem;
+}
